@@ -1,6 +1,6 @@
 services:
   identidock:
-    build: 11
+    build: .
     ports:
       - "5000:5000"
     environment:
