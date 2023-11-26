@@ -1,12 +1,10 @@
 services:
   identidock:
-    build: 11
-    ports:
-      - "5000:5000"
+    build: .
+    expose:
+      - "9090"
     environment:
-      ENV: DEV
-    volumes:
-      - ./app:/app
+      ENV: PROD
     links:
       - dnmonster
       - redis
