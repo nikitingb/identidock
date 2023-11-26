@@ -4,7 +4,7 @@ RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 RUN pip install flask uwsgi requests redis
 WORKDIR /app
 COPY app /app
-COPY --chown=uwsgi:uwsgi cmd.sh /
+COPY cmd.sh /
 
 EXPOSE 9090 9191
 USER uwsgi
